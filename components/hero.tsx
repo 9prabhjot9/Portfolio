@@ -16,7 +16,7 @@ export function Hero() {
       text: "'am",
     },
     {
-      text: "Prahjot",
+      text: "Prabhjot",
       className: "text-blue-500 dark:text-blue-500",
     },
     {
@@ -38,7 +38,7 @@ export function Hero() {
           <TypewriterEffect words={words} />
         </h1>
         <motion.p
-          className="text-xl md:text-2xl text-white/80 max-w-2xl"
+          className="text-xl md:text-2xl text-white/80 max-w-2xl py-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
