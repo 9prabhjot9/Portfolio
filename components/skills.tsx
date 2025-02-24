@@ -33,7 +33,7 @@ export function Skills() {
         >
           Tech Stack
         </motion.h2>
-        <div className="grid grid-cols-4 sm:grid-cols-4md:grid-cols-4 gap-4 max-w-xl mx-auto">
+        <div className="grid grid-cols-3 sm:grid-cols-4md:grid-cols-4 gap-4 max-w-xl mx-auto">
           {SKILLS.map((skill, index) => (
             <motion.div
               key={skill.name}
