@@ -40,7 +40,7 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground relative">
       <nav className="fixed left-8 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
         <div className="flex flex-col gap-4">
-          {["intro", "work", "thoughts", "connect"].map((section) => (
+          {["intro", "work", "connect"].map((section) => (
             <button
               key={section}
               onClick={() => document.getElementById(section)?.scrollIntoView({ behavior: "smooth" })}
@@ -52,7 +52,7 @@ export default function Home() {
           ))}
         </div>
       </nav>
-
+ 
       <main className="max-w-4xl mx-auto px-8 lg:px-16">
         <header
           id="intro"
@@ -115,46 +115,44 @@ export default function Home() {
           </div>
         </header>
 
-        <section id="work" ref={(el) => {sectionsRef.current[1] = el}} className="min-h-screen py-32 opacity-0">
+        <section id="work" ref={(el) => {sectionsRef.current[1] = el}} className="min-h-screen py-20 opacity-0">
           <div className="space-y-16">
             <div className="flex items-end justify-between">
-              <h2 className="text-4xl font-light">Selected Work</h2>
-              <div className="text-sm text-muted-foreground font-mono">2019 — 2025</div>
+              <h2 className="text-4xl font-light">Selected Project</h2>
             </div>
 
-            <div className="space-y-12">
+            <div className="space-y-14">
               {[
                 {
                   year: "2023",
-                  role: "Senior Frontend Engineer",
+                  role: "BlogHub",
                   company: "Vercel",
-                  description: "Leading frontend architecture for developer tools and AI-powered features.",
-                  tech: ["React", "TypeScript", "Next.js"],
+                  description: "A personal blogging platform to share ideas, tutorials, and tech insights.",
+                  tech: ["React", "TypeScript", "Hono", "Nodejs"],
+                  url: "https://bloghub.prabhjot9.tech/landing"
                 },
                 {
                   year: "2022",
-                  role: "Frontend Engineer",
-                  company: "Linear",
-                  description: "Built performant interfaces for project management and team collaboration.",
-                  tech: ["React", "GraphQL", "Framer Motion"],
+                  role: "FringAI",
+                  company: "Currently Building",
+                  description: "Your intelligent AI companion for knowledge, creativity, and problem-solving.",
+                  tech: ["Next.js", "JavaScript", "Inngest"],
                 },
                 {
-                  year: "2021",
-                  role: "Full Stack Developer",
-                  company: "Stripe",
-                  description: "Developed payment infrastructure and merchant-facing dashboard features.",
-                  tech: ["Ruby", "React", "PostgreSQL"],
+                  year: "2022",
+                  role: "DoList",
+                  company: "vercel",
+                  description: "A simple and smart app to manage your tasks and boost productivity.",
+                  tech: ["TypeScript", "Inngest"],
+                  url: "https://do-list-delta.vercel.app"
                 },
-                {
-                  year: "2019",
-                  role: "Software Engineer",
-                  company: "Airbnb",
-                  description: "Created booking flow optimizations and host management tools.",
-                  tech: ["React", "Node.js", "MySQL"],
-                },
+                
               ].map((job, index) => (
-                <div
+                
+                <a
                   key={index}
+                  href={job.url} 
+                  target="_blank" 
                   className="group grid lg:grid-cols-12 gap-8 py-8 border-b border-border/50 hover:border-border transition-colors duration-500"
                 >
                   <div className="lg:col-span-2">
@@ -175,13 +173,14 @@ export default function Home() {
                     {job.tech.map((tech) => (
                       <span
                         key={tech}
+                        
                         className="px-2 py-1 text-xs text-muted-foreground rounded group-hover:border-muted-foreground/50 transition-colors duration-500"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
@@ -189,14 +188,14 @@ export default function Home() {
 
         
 
-        <section id="connect" ref={(el) => {sectionsRef.current[3] = el}} className="py-32 opacity-0">
+        <section id="connect" ref={(el) => {sectionsRef.current[3] = el}} className="py-25 opacity-0">
           <div className="grid lg:grid-cols-2 gap-16">
             <div className="space-y-8">
               <h2 className="text-4xl font-light">Let&apos; Connect</h2>
 
               <div className="space-y-6">
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  Always interested in new opportunities, collaborations, and conversations about technology and design.
+                  Always interested in new opportunities, collaborations, and conversations about technology.
                 </p>
 
                 <div className="space-y-4">
@@ -204,7 +203,7 @@ export default function Home() {
                     href="mailto:jordan@example.com"
                     className="group flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors duration-300"
                   >
-                    <span className="text-lg">jordan@example.com</span>
+                    <span className="text-lg">ps459811@gmail.com</span>
                     <svg
                       className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
                       fill="none"
@@ -223,14 +222,15 @@ export default function Home() {
 
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { name: "GitHub", handle: "@jordanchen", url: "#" },
-                  { name: "Twitter", handle: "@jordanchen", url: "#" },
-                  { name: "LinkedIn", handle: "jordan-chen", url: "#" },
-                  { name: "Dribbble", handle: "jordanchen", url: "#" },
+                  { name: "GitHub", handle: "@9prabhjot9", url: "https://github.com/9prabhjot9" },
+                  { name: "Twitter", handle: "@9PrabhjotSingh9", url: "https://x.com/9PrabhjotSingh9" },
+                  { name: "LinkedIn", handle: "Prabhjot singh", url: "https://www.linkedin.com/in/prabhjot-singh-0475ba278/" },
+                  
                 ].map((social) => (
-                  <Link
+                  <a
                     key={social.name}
                     href={social.url}
+                    target="_blank"
                     className="group p-4 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-300 hover:shadow-sm"
                   >
                     <div className="space-y-2">
@@ -239,7 +239,7 @@ export default function Home() {
                       </div>
                       <div className="text-sm text-muted-foreground">{social.handle}</div>
                     </div>
-                  </Link>
+                  </a>
                 ))}
               </div>
             </div>
@@ -249,7 +249,7 @@ export default function Home() {
         <footer className="py-16 border-t border-border">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
             <div className="space-y-2">
-              <div className="text-sm text-muted-foreground">© 2025 Jordan Chen. All rights reserved.</div>
+              <div className="text-sm text-muted-foreground">© 2025 Prabhjot Singh</div>
               <div className="text-xs text-muted-foreground">Built with Next.js and deployed on Vercel</div>
             </div>
 
