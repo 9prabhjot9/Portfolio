@@ -92,10 +92,30 @@ export default function Home() {
             <div className="lg:col-span-2 flex flex-col justify-end space-y-8">
               <div className="space-y-4">
                 <div className="text-sm text-muted-foreground font-mono">CURRENTLY</div>
-                <div className="space-y-2">
-                  <div className="text-foreground">Student</div>
-                  <div className="text-xs text-muted-foreground">2024 — 2028</div>
-                </div>
+                <div className="flex items-center gap-4">
+  <div className="text-foreground">Student</div>
+  <a
+    href="/resume.pdf"
+    target="_blank"
+    className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+  >
+    <svg
+      className="w-5 h-8"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M12 2a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2h6zm0 0l6 6m-6-6v6h6"
+      />
+    </svg>
+    Resume
+  </a>
+</div>
+<div className="text-xs text-muted-foreground">2024 — 2028</div>
               </div>
 
               <div className="space-y-4">
@@ -115,7 +135,7 @@ export default function Home() {
           </div>
         </header>
 
-        <section id="work" ref={(el) => {sectionsRef.current[1] = el}} className="min-h-screen py-20 opacity-0">
+        <section id="work" ref={(el) => {sectionsRef.current[1] = el}} className="min-h-screen py-10 opacity-0">
           <div className="space-y-16">
             <div className="flex items-end justify-between">
               <h2 className="text-4xl font-light">Selected Project</h2>
@@ -124,7 +144,7 @@ export default function Home() {
             <div className="space-y-14">
               {[
                 {
-                  year: "2023",
+                  year: "2025",
                   role: "BlogHub",
                   company: "Vercel",
                   description: "A personal blogging platform to share ideas, tutorials, and tech insights.",
@@ -132,24 +152,24 @@ export default function Home() {
                   url: "https://bloghub.prabhjot9.tech/landing"
                 },
                 {
-                  year: "2022",
+                  year: "2025",
                   role: "FringAI",
                   company: "Currently Building",
                   description: "Your intelligent AI companion for knowledge, creativity, and problem-solving.",
                   tech: ["Next.js", "JavaScript", "Inngest"],
                 },
                 {
-                  year: "2022",
+                  year: "2024",
                   role: "DoList",
                   company: "vercel",
                   description: "A simple and smart app to manage your tasks and boost productivity.",
-                  tech: ["TypeScript", "Inngest"],
+                  tech: ["TypeScript", "React"],
                   url: "https://do-list-delta.vercel.app"
                 },
                 
               ].map((job, index) => (
                 
-                <a
+                <a 
                   key={index}
                   href={job.url} 
                   target="_blank" 
@@ -250,7 +270,6 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
             <div className="space-y-2">
               <div className="text-sm text-muted-foreground">© 2025 Prabhjot Singh</div>
-              <div className="text-xs text-muted-foreground">Built with Next.js and deployed on Vercel</div>
             </div>
 
             <div className="flex items-center gap-4">
@@ -282,21 +301,7 @@ export default function Home() {
                 )}
               </button>
 
-              <button className="group p-3 rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-300">
-                <svg
-                  className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                  />
-                </svg>
-              </button>
+              
             </div>
           </div>
         </footer>
