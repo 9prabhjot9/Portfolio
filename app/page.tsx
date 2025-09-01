@@ -72,7 +72,7 @@ export default function Home() {
 
               <div className="space-y-6 max-w-md">
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  I'm exploring new techonologies, buidling projects
+                  I&apos;m exploring new techonologies, buidling projects
                   and diving into the world of
                   <span className="text-foreground"> dev</span>,<span className="text-foreground"> design</span>,
                   and
@@ -192,7 +192,7 @@ export default function Home() {
         <section id="connect" ref={(el) => {sectionsRef.current[3] = el}} className="py-32 opacity-0">
           <div className="grid lg:grid-cols-2 gap-16">
             <div className="space-y-8">
-              <h2 className="text-4xl font-light">Let's Connect</h2>
+              <h2 className="text-4xl font-light">Let&apos; Connect</h2>
 
               <div className="space-y-6">
                 <p className="text-xl text-muted-foreground leading-relaxed">
