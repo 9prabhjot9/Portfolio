@@ -123,8 +123,8 @@ export default function Home() {
           </div>
         </header>
 
-        <section id="work" ref={(el) => {sectionsRef.current[1] = el}} className="min-h-screen py-8 opacity-0">
-          <div className="space-y-16">
+        <section id="work" ref={(el) => {sectionsRef.current[1] = el}} className="min-h-screen py-6 opacity-0">
+          <div className="space-y-10">
             <div className="flex items-end justify-between">
               <h2 className="text-4xl font-light">Project&apos;s</h2>
             </div>
