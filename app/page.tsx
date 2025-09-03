@@ -123,11 +123,13 @@ export default function Home() {
           </div>
         </header>
 
-        <section id="work" ref={(el) => {sectionsRef.current[1] = el}} className="min-h-screen py-6 opacity-0">
+
+        <section id="work" ref={(el) => {sectionsRef.current[1] = el}} className="min-h-screen py-4 opacity-0">
           <div className="space-y-10">
             <div className="flex items-end justify-between">
               <h2 className="text-4xl font-light">Project&apos;s</h2>
             </div>
+
 
             <div className="space-y-14">
               {[
@@ -145,6 +147,7 @@ export default function Home() {
                   company: "Currently Building",
                   description: "Your intelligent AI companion for knowledge, creativity, and problem-solving.",
                   tech: ["Next.js", "JavaScript", "Inngest"],
+                  url: "https://fring-ai.vercel.app"
                 },
                 {
                   year: "2024",
