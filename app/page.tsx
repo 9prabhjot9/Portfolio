@@ -147,7 +147,7 @@ export default function Home() {
                   company: "Currently Building",
                   description: "Your intelligent AI companion for knowledge, creativity, and problem-solving.",
                   tech: ["Next.js", "JavaScript", "Inngest"],
-                  url: "https://fring-ai.vercel.app"
+                  
                 },
                 {
                   year: "2024",
