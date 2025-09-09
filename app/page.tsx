@@ -95,7 +95,7 @@ export default function Home() {
                 <div className="flex items-center gap-4">
               <div className="text-foreground">Student</div>
               <a
-                href="/resume.pdf"
+                href="/Resume.pdf"
                 target="_blank"
                 className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
